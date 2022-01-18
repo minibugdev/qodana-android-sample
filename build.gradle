@@ -13,6 +13,17 @@ buildscript {
     }
 }
 
+plugins {
+    id "org.jetbrains.qodana" version "0.1.13"
+}
+
+qodana {
+    dockerContainerName = "yay-android-inspections"
+    dockerImageName = "jetbrains/qodana-jvm-android:latest"
+    saveReport = true
+    showReport = true
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
