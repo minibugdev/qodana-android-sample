@@ -1,0 +1,1 @@
+qodana-sample
